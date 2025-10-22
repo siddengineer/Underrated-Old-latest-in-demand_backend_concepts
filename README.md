@@ -2,7 +2,7 @@
 
 🔑 Underrated Backend Concepts
 
-Rate Limiting & Throttling
+Rate Limiting & Throttling     https://nordicapis.com/api-rate-limiting-vs-api-throttling-how-are-they-different/   
 
 Prevents abuse (e.g., bots spamming APIs).
 
