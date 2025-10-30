@@ -1,0 +1,48 @@
+Backend Security Rate Limiting Notes
+
+1. Purpose:
+
+Ensure API stability and prevent misuse.
+
+Protect resources from excessive or automated requests.
+
+Safeguard user data and backend servers.
+
+2. How it Prevents Abuse:
+
+Detects and blocks bots or scripts trying to spam APIs.
+
+Limits the number of requests per user, IP, or API key within a specific time frame.
+
+Helps avoid service crashes due to high traffic.
+
+3. Common Techniques:
+
+Rate Limiting: Restrict the number of API requests per time window (e.g., 100 requests/min).
+
+Throttling: Slow down responses for excessive requests instead of blocking.
+
+CAPTCHA: Ensure requests are made by humans.
+
+Authentication & API Keys: Identify and limit requests per user or client.
+
+IP Blacklisting / Whitelisting: Block known malicious IPs.
+
+Web Application Firewall (WAF): Detect and block automated attacks.
+
+4. Example (Node.js / Express Rate Limiter):
+
+const rateLimit = require('express-rate-limit');
+
+const apiLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // Limit each IP to 100 requests per window
+  message: "Too many requests, please try again later."
+});
+
+app.use('/api/', apiLimiter);
+
+
+5. Key Takeaway:
+
+Rate limiting and abuse prevention mechanisms protect APIs from bots and spamming, ensuring reliability and security.
