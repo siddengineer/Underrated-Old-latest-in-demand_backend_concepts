@@ -4,7 +4,7 @@
 
 Rate Limiting & Throttling     https://nordicapis.com/api-rate-limiting-vs-api-throttling-how-are-they-different/   
 
-Prevents abuse (e.g., bots spamming APIs).
+Prevents abuse (e.g., bots spamming APIs) . https://github.com/siddengineer/Underrated-Old-latest-in-demand_backend_concepts/blob/main/Backend%20Security%20Rate%20Limiting%20Notes
 
 Protects servers from overload.
 
